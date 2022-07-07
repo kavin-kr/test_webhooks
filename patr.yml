@@ -11,3 +11,7 @@ steps:
         value: world
     commands:
       - echo $var1 $var2
+  - name: ls
+    image: alpine/git
+    commands:
+      - ls -la
