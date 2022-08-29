@@ -7,9 +7,9 @@ steps:
     env:
       var1: hello
       var2: world
-    commands:
+    command:
       - echo $var1 $var2
   - name: ls
     image: alpine/git
-    commands:
+    command:
       - ls -la
