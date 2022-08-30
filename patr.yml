@@ -5,13 +5,11 @@ steps:
   - name: echo-var
     image: alpine/git
     env:
-      - name: var1
-        value: hello
-      - name: var2
-        value: world
-    commands:
+      var1: hello
+      var2: world
+    command:
       - echo $var1 $var2
   - name: ls
     image: alpine/git
-    commands:
+    command:
       - ls -la
