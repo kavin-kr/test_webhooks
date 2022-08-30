@@ -11,7 +11,8 @@ steps:
       - echo $var1 $var2
   - name: is-tagged
     when:
-      event: tag
+      event: 
+        - tag
     then: 
       handle-tag-event
     else:
