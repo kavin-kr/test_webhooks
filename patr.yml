@@ -40,7 +40,7 @@ steps:
       #   - CI_REGISTRY_PASSWORD  : password for docker registry
 
       # using temp tag
-      CI_DOCKER_TAG=$(git rev-parse --short HEAD)
+      CI_DOCKER_TAG=$(date +'%m.%d-%H.%M')
 
       # kaniko will pollute context directory while building docker image
       # copy local repo to different directory 
