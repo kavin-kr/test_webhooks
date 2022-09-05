@@ -7,8 +7,9 @@ steps:
     env:
       var1: hello
       var2: world
-    command:
+    commands:
       - echo $var1 $var2
+    next: is-tagged
   - name: is-tagged
     when:
       event: 
