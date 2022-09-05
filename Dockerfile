@@ -4,4 +4,4 @@ WORKDIR /workspace
 
 ADD ./* /workspace/
 
-CMD [ "/bin/ls", "-la"]
+CMD [ "/bin/ls", "-la", "/"]
