@@ -1,4 +1,4 @@
-version: v1
+version: v0
 kind: Pipeline
 name: test-pipeline
 steps:
@@ -7,7 +7,7 @@ steps:
     env:
       var1: hello
       var2: world
-    commands:
+    command:
       - echo $var1 $var2
     next: is-tagged
   - name: is-tagged
