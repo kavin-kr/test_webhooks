@@ -9,16 +9,16 @@ steps:
       var2: world
     command:
       - echo $var1 $var2
-    next: is-tagged
-  - name: is-tagged
+    next: "asdfsdf adsfsdf"
+  - name: "asdfsdf adsfsdf"
     when:
       event: 
         - tag
     then: 
-      handle-tag-event
+      "$asd asdfowfksjk"
     else:
       ls
-  - name: handle-tag-event
+  - name: "$asd asdfowfksjk"
     image: alpine/git
     command: echo "tag is created"   
   - name: ls
