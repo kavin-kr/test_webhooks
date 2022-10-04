@@ -2,7 +2,7 @@ version: v0
 kind: Pipeline
 name: test-pipeline
 steps:
-  - name: echo-var
+  - name: echo-var$
     image: alpine/git
     env:
       var1: hello
@@ -25,8 +25,8 @@ steps:
     image: alpine/git
     command:
       - ls -la
-    next: test-kaniko
-  - name: test-kaniko
+    next: "test kaniko 234"
+  - name: "test kaniko 234"
     image: gcr.io/kaniko-project/executor:debug
     env:
       CI_REGISTRY_USER:
