@@ -55,3 +55,4 @@ steps:
         --destination=registry.patr.cloud/personal-workspace-93f07a889d7c4866ac427027ccf71d0a/test:$CI_DOCKER_TAG
       
       ls -la /
+
