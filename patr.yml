@@ -1,11 +1,13 @@
 version: v0
 kind: Pipeline
-name: test-pipeline
+name: default
 steps:
-  - name: echo-var
-    image: alpine/git
-    env:
-      var1: hello
-      var2: world
-    command:
-      - echo $var1 $var2
+  - name: Install Dependencies
+    image: python:3.9-slim-buster
+    commands:
+      - pip3 install -r requirements.txt
+    next: Run Script
+  - name: Run Script
+    image: python:3.9-slim-buster
+    commands:
+      - python script.py
