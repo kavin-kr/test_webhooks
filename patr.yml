@@ -6,3 +6,4 @@ steps:
     image: alpine
     commands:
       - echo "hello world"
+      - printenv | sort
