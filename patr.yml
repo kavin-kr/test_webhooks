@@ -2,12 +2,7 @@ version: v0
 kind: Pipeline
 name: default
 steps:
-  - name: Install Dependencies
-    image: python:3.9-slim-buster
+  - name: testing
+    image: alpine
     commands:
-      - pip3 install -r requirements.txt
-    next: Run Script
-  - name: Run Script
-    image: python:3.9-slim-buster
-    commands:
-      - python script.py
+      - echo "hello world"
