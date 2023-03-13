@@ -3,7 +3,8 @@ kind: Pipeline
 name: default
 steps:
   - name: testing
-    image: alpine
+    image: ubuntu
     commands:
       - echo "hello world"
       - printenv | sort
+      - sleep infinity
