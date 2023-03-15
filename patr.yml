@@ -5,4 +5,4 @@ steps:
   - name: echo-var
     image: alpine/git
     command:
-      - echo "testing hello world hello world"
+      - echo "testing hello world hello world1"
