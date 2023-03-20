@@ -7,4 +7,3 @@ steps:
     commands:
       - echo "hello world"
       - printenv | sort
-      - sleep infinity
