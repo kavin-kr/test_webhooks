@@ -3,28 +3,22 @@ kind: Pipeline
 name: Default
 services: []
 steps:
-  - name: decide
+  - name: decide1
     when:
       branch:
         - ci-test
       event:
         - commit
-    then: decide2
-    else: node1
+    then: node1
+    else: decide2
   - name: node1
     image: alpine
     commands:
       - echo "node1"
-    next: endnode
   - name: decide2
     when:
       branch:
         - ci-test
       event:
         - commit
-    then: endnode
-    else: endnode
-  - name: endnode
-    image: alpine
-    commands:
-      - echo "in the end node"
+    then: node1
