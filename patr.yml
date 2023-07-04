@@ -3,14 +3,15 @@ kind: Pipeline
 name: Default
 services: []
 steps:
-  - name: env
+  - name: Decision
+    when:
+      branch:
+        - ci-test
+      event:
+        - commit
+    then: node1
+    else: node1
+  - name: node1
     image: alpine
     commands:
-      - printenv | sort
-      - echo $var1
-      - echo $var2
-    environment:
-      var1:
-        from_secret: hello
-      var2:
-        from_secret: world
+      - echo "building"
